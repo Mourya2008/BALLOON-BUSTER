@@ -39,6 +39,7 @@ function draw() {
     }
   
 
+
   //moving bow
   bow.y = World.mouseY
   
@@ -51,35 +52,17 @@ function draw() {
   //creating continous balloons
   var select_balloon = Math.round(random(1,1));
   
-  if (World.frameCount % 100 == 0) {
-    if (select_balloon == 1) {
-      redBalloon();
-    }
+if(World.frameCount % 100 == 0){
+  if(select_balloon == 1){
+    redBalloon();
+  }else if(select_balloon == 2){
+    greenBalloon();
+  }else if(select_balloon == 3){
+    pinkBalloon();
+  }else{
+    blueBalloon();
   }
-  
-  var select_balloon = Math.round(random(1,1));
-  
-  if (World.frameCount % 100 == 0) {
-    if (select_balloon == 1) {
-      greenBalloon();
-    }
-  }
-
-  var select_balloon = Math.round(random(1,1));
-  
-  if (World.frameCount % 100 == 0) {
-    if (select_balloon == 1) {
-      blueBalloon();
-    }
-  }
-
-  var select_balloon = Math.round(random(1,1));
-  
-  if (World.frameCount % 100 == 0) {
-    if (select_balloon == 1) {
-      pinkBalloon();
-    }
-  }
+}
 
   drawSprites();
 }
@@ -105,6 +88,7 @@ function redBalloon() {
   red.scale = 0.1;
 
 }
+
 
 function blueBalloon() {
   var blue = createSprite(0,Math.round(random(40, 370)), 10, 10);
